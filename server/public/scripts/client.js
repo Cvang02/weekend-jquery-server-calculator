@@ -11,6 +11,7 @@ function onReady () {
     $('#multiplyButton').on('click', multiply);
     $('#divideButton').on('click', divide);
     $('#clearButton').on('click', clearInputs);
+    $('#deleteButton').on('click', deleteHistory);
 } // end of onReady-function. 
 
 // For this function, we want to send the input numbers 
@@ -94,3 +95,17 @@ function clearInputs () {
     $('#firstNumberInput').val('');
     $('#secondNumberInput').val('');
 } //END OF CLEARINPUTS-FUNCTION. 
+
+// THIS FUNCTION WILL SEND A REQUESTED TO DELETE ALL THE INFORMATION 
+// DATA HAS COLLECTED AND STORED ON THE SERVER SIDE,
+// WHENEVER WE CLICKED ON DELETE BUTTON. 
+function deleteHistory () {
+    $.ajax({
+        type: 'Delete',
+        url: '/calculation'
+    }).then(function(response){
+        console.log('History has been wiped!!!')
+        $('#historyOutputList').empty()
+        $('#totalOutput').empty();
+    })
+} //END OF DELETEHISTORY-FUNCTION.

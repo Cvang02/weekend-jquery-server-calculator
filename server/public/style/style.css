@@ -41,7 +41,19 @@ header {
     border-radius: 25px;
 }
 
-input {
+#firstNumberInput, #secondNumberInput {
+    border-radius: 5rem;
+    height: 3rem;
+    width: 8rem;
+    font-size: 1.5rem;
+    margin: .5rem;
+    text-align: center;
+    border: 3px solid black;
+    background-color: azure;
+    cursor: pointer;
+}
+
+#addButton, #subtractionButton, #multiplyButton, #divideButton {
     border-radius: 5rem;
     height: 3rem;
     width: 8rem;
@@ -54,12 +66,33 @@ input {
     box-shadow: 0 9px black;
 }
 
-input:hover {background-color: palevioletred}
+#addButton:hover {background-color: palevioletred}
+#subtractionButton:hover {background-color: palevioletred}
+#multiplyButton:hover {background-color: palevioletred}
+#divideButton:hover {background-color: palevioletred}
 
-input:active {
+#addButton:active {
   background-color: pink;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#subtractionButton:active {
+    background-color: pink;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#multiplyButton:active {
+    background-color: pink;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#divideButton:active {
+    background-color: pink;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
@@ -82,4 +115,8 @@ button:active {
   background-color: pink;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#deleteButton {
+    margin-left: 800px;
 }

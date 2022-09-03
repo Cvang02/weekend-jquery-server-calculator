@@ -35,11 +35,14 @@ app.post('/calculation', (req, res) => {
       console.log('result is:', cal.total)
     }
   }
-
+  
   res.sendStatus(201);
 }) // END OF POST FUNCTION. 
 
-
+app.delete('/calculation', (req, res) => {
+  calculationHistory = [];
+  res.send(calculationHistory);
+}) //END OF DELETE FUNCTION. 
 
 
 app.get('/calculation', (req, res) => {
