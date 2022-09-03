@@ -22,6 +22,13 @@ function numberInput () {
     let number2 = $('#secondNumberInput').val();
     let total = 0;
 
+    if (!number1 || !number2) {
+        alert('HEY 🐷, THATS NOT HOW A CALCULATOR WORKS!!!')
+        alert('PLEASE TRY AGAIN!!!!!')
+        alert('WITH NUMBERS THIS TIME!!!')
+        return;
+    }
+
     $.ajax({
         type: 'POST',
         url: '/calculation',
