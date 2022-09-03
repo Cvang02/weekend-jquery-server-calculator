@@ -21,7 +21,7 @@ function numberInput () {
     $.ajax({
         type: 'POST',
         url: '/calculation',
-        data: {number1, number2, operator}
+        data: {number1, operator, number2,}
     }).then(function(response) {
         console.log('info collected');
     })
@@ -29,9 +29,28 @@ function numberInput () {
     $('#firstNumberInput').val('');
     $('#secondNumberInput').val('');
 
+    numberOutput ()
+
 } //end of numberInput-function. 
 
+// FOR THIS FUNCTION, WE WANT TO 'GET' REQUESTED THE COLLECTED INPUT
+// WE WILL THEN WANT TO RECIEVED ANOTHER MESSAGE FROM SERVER SIDE 
+// THEN WE WANT TO APPENED THE TOTAL CALCULATION AND CALCULATION HISTORY. 
 
+function numberOutput () {
+    $.ajax({
+        type: 'GET',
+        url: '/calculation'
+    }).then(function(response){
+        console.log(response);
+        $('#historyOutputList').empty();
+        for (let calHist of response) {
+        $('#historyOutputList').append(`
+            <li>${calHist.number1} ${calHist.operator} ${calHist.number2}</li>
+        `)
+        }
+    })
+} // END OF NUMBEROUTPUT-FUNCTION. 
 
 
 // GLOBAL OPERATOR WITH NO SET VALUE.
