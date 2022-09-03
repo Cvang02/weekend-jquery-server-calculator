@@ -4,6 +4,7 @@ body {
     background-image: url('../style/Images/backgroundImage.jpeg');
     margin: 50px;
     padding: 80px;
+    border-radius: 25px;
 }
 
 header {
@@ -11,29 +12,33 @@ header {
     text-align: center;
     padding: 30px;
     margin: 50px;
-    background-color: pink;
+    background-image: linear-gradient(white, pink);
+    border-radius: 25px;
+    text-shadow: 2px 2px 5px red;
 }
 
 .allButton {
     outline: 5px solid black;
     margin: 50px;
     text-align: center;
-    background-color: pink;
+    background-image: linear-gradient(white, pink);
+    border-radius: 25px;
 }
 
 .total {
     outline: 5px solid black;
     margin: 50px;
     padding: 30px;
-    background-color: pink;
-
+    background-image: linear-gradient(white, pink);
+    border-radius: 25px;
 }
 
 .history {
     outline: 5px solid black;
     margin: 50px;
     padding: 30px;
-    background-color: pink;
+    background-image: linear-gradient(white, pink);
+    border-radius: 25px;
 }
 
 input {
@@ -45,9 +50,20 @@ input {
     text-align: center;
     border: 3px solid black;
     background-color: azure;
-  }
+    cursor: pointer;
+    box-shadow: 0 9px black;
+}
 
-  button {
+input:hover {background-color: palevioletred}
+
+input:active {
+  background-color: pink;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+button {
     border-radius: 5rem;
     height: 3rem;
     width: 8rem;
@@ -56,4 +72,14 @@ input {
     text-align: center;
     border: 3px solid black;
     background-color: azure;
-  }
+    cursor: pointer;
+    box-shadow: 0 9px black;
+}
+
+button:hover {background-color: palevioletred}
+
+button:active {
+  background-color: pink;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
