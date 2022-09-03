@@ -10,8 +10,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 console.log('server.js is working and running!!!');
 
 let calculationHistory = [];
-let result = 0;
-
 
 // GET AND POST ROUTES GOES HERE. 
 app.post('/calculation', (req, res) => {
@@ -21,12 +19,12 @@ app.post('/calculation', (req, res) => {
 
   for (let cal of calculationHistory) {
     if (cal.operator === '+') {
-      result = Number(cal.number1) + Number(cal.number2)
-      console.log('result is:', result)
+      cal.total = Number(cal.number1) + Number(cal.number2)
+      console.log('result is:', Number(cal.total))
     }
     if (cal.operator === '-') {
-      result = Number(cal.number1) - Number(cal.number2)
-      console.log('result is:', result)
+      cal.total = Number(cal.number1) - Number(cal.number2)
+      console.log('result is:', cal.total)
     }
   }
 

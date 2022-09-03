@@ -17,11 +17,12 @@ function onReady () {
 function numberInput () {
     let number1 = $('#firstNumberInput').val();
     let number2 = $('#secondNumberInput').val();
+    let total = 0;
 
     $.ajax({
         type: 'POST',
         url: '/calculation',
-        data: {number1, operator, number2,}
+        data: {number1, operator, number2, total}
     }).then(function(response) {
         console.log('info collected');
     })
@@ -45,8 +46,15 @@ function numberOutput () {
         console.log(response);
         $('#historyOutputList').empty();
         for (let calHist of response) {
-        $('#historyOutputList').append(`
-            <li>${calHist.number1} ${calHist.operator} ${calHist.number2}</li>
+            $('#totalOutput').empty();
+            $('#totalOutput').append(`<p id="totalOutput">${calHist.total}</p>`)
+            $('#historyOutputList').append(`
+            <li>${calHist.number1} 
+                ${calHist.operator} 
+                ${calHist.number2}
+                = 
+                ${calHist.total}
+            </li>
         `)
         }
     })
