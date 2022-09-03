@@ -6,6 +6,8 @@ console.log('jquery is loaded'); // this is just to make sure ready DOC is loadi
 
 function onReady () {
     $('#equalButton').on('click', numberInput);
+    $('#addButton').on('click', add);
+    $('#subtractionButton').on('click', sub);
 } // end of onReady-function. 
 
 // For this function, we want to send the input numbers 
@@ -19,12 +21,26 @@ function numberInput () {
     $.ajax({
         type: 'POST',
         url: '/calculation',
-        data: {number1, number2}
+        data: {number1, number2, operator}
     }).then(function(response) {
         console.log('info collected');
     })
 
-    $('input').val('');
+    $('#firstNumberInput').val('');
+    $('#secondNumberInput').val('');
 
 } //end of numberInput-function. 
 
+
+
+
+// GLOBAL OPERATOR WITH NO SET VALUE.
+// THE VALUE OF OPERATOR WILL DEPEND ON WHICH BUTTON IS BEING CLICKED ON. 
+let operator;
+
+function add () {
+    operator = ($('#addButton').val())
+} //END OF ADD-FUNCTION.
+function sub () {
+    operator = ($('#subtractionButton').val())
+} // END OF SUB-FUNCTION.

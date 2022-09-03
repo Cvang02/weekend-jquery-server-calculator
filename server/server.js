@@ -14,8 +14,14 @@ let calculationHistory = [];
 // GET AND POST ROUTES GOES HERE. 
 app.post('/calculation', (req, res) => {
   calculationHistory.push(req.body);
-  console.log('req.body is:', req.body);
+  console.log('req.body is:', (req.body));
   console.log(calculationHistory);
+  
+
+
+
+
+
   res.sendStatus(201);
 })
 
