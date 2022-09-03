@@ -5,7 +5,8 @@ const PORT = 5000;
 app.use(express.static('server/public'));
 const bodyParser = require('body-parser');
 
-console.log('This means that server.js is working')
+// This is just to make sure server is running when connected for visual on terminal. 
+console.log('server.js is working and working');
 
 
 
