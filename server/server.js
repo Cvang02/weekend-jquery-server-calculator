@@ -26,6 +26,14 @@ app.post('/calculation', (req, res) => {
       cal.total = Number(cal.number1) - Number(cal.number2)
       console.log('result is:', cal.total)
     }
+    if (cal.operator === '*') {
+      cal.total = Number(cal.number1) * Number(cal.number2)
+      console.log('result is:', cal.total)
+    }
+    if (cal.operator === '/') {
+      cal.total = Number(cal.number1) / Number(cal.number2)
+      console.log('result is:', cal.total)
+    }
   }
 
   res.sendStatus(201);

@@ -8,6 +8,8 @@ function onReady () {
     $('#equalButton').on('click', numberInput);
     $('#addButton').on('click', add);
     $('#subtractionButton').on('click', sub);
+    $('#multiplyButton').on('click', multiply);
+    $('#divideButton').on('click', divide);
 } // end of onReady-function. 
 
 // For this function, we want to send the input numbers 
@@ -71,3 +73,9 @@ function add () {
 function sub () {
     operator = ($('#subtractionButton').val())
 } // END OF SUB-FUNCTION.
+function multiply () {
+    operator = ($('#multiplyButton').val())
+} // END OF MULTIPLY-FUNCTION.
+function divide () {
+    operator = ($('#divideButton').val())
+} // END OF DIVIDE-FUNCTION.
