@@ -1,3 +1,59 @@
 body {
-    background-color: powderblue;
+    outline: 10px solid black;
+    /* background-color: powderblue; */
+    background-image: url('../style/Images/backgroundImage.jpeg');
+    margin: 50px;
+    padding: 80px;
 }
+
+header {
+    outline: 5px solid black;
+    text-align: center;
+    padding: 30px;
+    margin: 50px;
+    background-color: pink;
+}
+
+.allButton {
+    outline: 5px solid black;
+    margin: 50px;
+    text-align: center;
+    background-color: pink;
+}
+
+.total {
+    outline: 5px solid black;
+    margin: 50px;
+    padding: 30px;
+    background-color: pink;
+
+}
+
+.history {
+    outline: 5px solid black;
+    margin: 50px;
+    padding: 30px;
+    background-color: pink;
+}
+
+input {
+    border-radius: 5rem;
+    height: 3rem;
+    width: 8rem;
+    font-size: 1.5rem;
+    margin: .5rem;
+    text-align: center;
+    border: 3px solid black;
+    background-color: azure;
+  }
+
+  button {
+    border-radius: 5rem;
+    height: 3rem;
+    width: 8rem;
+    font-size: 1.5rem;
+    margin: .5rem;
+    text-align: center;
+    border: 3px solid black;
+    background-color: azure;
+  }

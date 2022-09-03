@@ -12,21 +12,22 @@
 <body>
     <header><h1>Server Side Calculator</h1></header>
     <main>
-        <section>
+        <section class="allButton">
             <input id="firstNumberInput" type="number" placeholder="Number">
             <input id="addButton" type="button" value="+">
             <input id="subtractionButton" type="button" value="-">
             <input id="multiplyButton" type="button" value="*">
             <input id="divideButton" type="button" value="/">
             <input id="secondNumberInput" type="number" placeholder="Number">
+            <br><br>
             <button id="equalButton">=</button>
             <button id="clearButton">Clear</button>
         </section>
-        <section>
-            <h2>Total</h2>
-            <p id="totalOutput"></p>
+        <section class="total">
+            <h1>Total</h1>
+            <h2 id="totalOutput"></h2>
         </section>
-        <section>
+        <section class="history">
             <h2>History</h2>
             <ul id="historyOutputList"></ul>
         </section>

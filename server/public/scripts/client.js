@@ -11,7 +11,6 @@ function onReady () {
     $('#multiplyButton').on('click', multiply);
     $('#divideButton').on('click', divide);
     $('#clearButton').on('click', clearInputs);
-
 } // end of onReady-function. 
 
 // For this function, we want to send the input numbers 
@@ -51,7 +50,9 @@ function numberOutput () {
         $('#historyOutputList').empty();
         for (let calHist of response) {
             $('#totalOutput').empty();
-            $('#totalOutput').append(`<p id="totalOutput">${calHist.total}</p>`)
+            $('#totalOutput').append(`
+            <h2 id="totalOutput">${calHist.total}</h2>
+            `)
             $('#historyOutputList').append(`
             <li>${calHist.number1} 
                 ${calHist.operator} 
