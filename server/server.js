@@ -49,14 +49,6 @@ app.get('/calculation', (req, res) => {
   res.send(calculationHistory);
 }) // END OF GET FUNCTION.
 
-
-
-
-
-
-
-
-
 // To start app by running `.listen()`
 app.listen(PORT, () => {
     console.log(`server is listening for requests on port ${PORT}.`)
